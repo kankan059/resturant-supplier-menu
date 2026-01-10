@@ -75,7 +75,7 @@ if (isset($_POST['signup'])) {
 <html>
 <head>
     <title>Signup</title>
-
+    <link rel="stylesheet" href="/assests/cs/sigunup.css">
     <script>
         function toggleContact() {
             var role = document.getElementById("role").value;

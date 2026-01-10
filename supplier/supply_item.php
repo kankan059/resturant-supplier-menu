@@ -96,7 +96,7 @@ if (isset($_POST['supply'])) {
 <body>
 
 <h2>Supply Item</h2>
-
+<link rel="stylesheet" href="/assests/cs/supply.css">
 <form method="POST">
 
     <label>Select Item</label><br>

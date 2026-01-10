@@ -35,9 +35,10 @@ $user_id = $_SESSION['id'];
     </script>
 </head>
 <body>
+    
 
 <h2>My Orders</h2>
-
+<link rel="stylesheet" href="/assests/cs/myorder.css">
 <?php
 $orders = mysqli_query($conn, "
     SELECT

@@ -45,6 +45,7 @@ if (isset($_POST['add_item'])) {
 <html>
 <head>
     <title>Add Item</title>
+    <link rel="stylesheet" href="/assests/cs/added.css">
 </head>
 <body>
 

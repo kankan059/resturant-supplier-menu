@@ -87,6 +87,7 @@ if (isset($_POST['buy'])) {
 <html>
 <head>
     <title>Buy Item</title>
+    <link rel="stylesheet" href="/assests/cs/buy.css">
     <script>
         function printReceipt() {
             var content = document.getElementById("receipt").innerHTML;
@@ -99,6 +100,7 @@ if (isset($_POST['buy'])) {
         }
     </script>
 </head>
+
 <body>
 
 <h2>Buy Item</h2>

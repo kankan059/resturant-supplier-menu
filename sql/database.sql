@@ -1,5 +1,5 @@
-CREATE DATABASE restaurant_system;
-USE restaurant_system;
+CREATE DATABASE resturant_supplier;
+USE resturant_supplier;
 
 -- Admin Table
 CREATE TABLE admins (

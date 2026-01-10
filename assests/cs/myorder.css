@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc, #eef2f7);
+    padding: 3rem 1rem;
+    color: #111827;
+}
+
+/* Page Title */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* Divider */
+hr {
+    border: none;
+    height: 1px;
+    background: #e5e7eb;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+/* Order summary (clickable card) */
+div[onclick^="toggleDetails"] {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 1.1rem 1.4rem;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+    transition: all 0.25s ease;
+}
+
+div[onclick^="toggleDetails"]:hover {
+    background: #f9fafb;
+    transform: translateY(-2px);
+}
+
+/* Summary text */
+div[onclick^="toggleDetails"] p {
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+/* Order details */
+div[id^="details-"] {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    background: #ffffff;
+    padding: 1.6rem;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Section heading */
+h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #1f2937;
+}
+
+/* Details text */
+div[id^="details-"] p {
+    margin-top: 0.45rem;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+/* Print button */
+button {
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.6rem;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(34, 197, 94, 0.45);
+}
+
+/* Empty message */
+body > p {
+    text-align: center;
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+/* Back link */
+a[href*="dashboard"] {
+    display: block;
+    max-width: 280px;
+    margin: 2.5rem auto 0;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+    transition: all 0.3s ease;
+}
+
+a[href*="dashboard"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    div[onclick^="toggleDetails"],
+    div[id^="details-"] {
+        padding: 1.2rem;
+        border-radius: 14px;
+    }
+}

@@ -44,6 +44,7 @@ if (isset($_GET['delete'])) {
 <html>
 <head>
     <title>Remove Item</title>
+    <link rel="stylesheet" href="/assests/cs/rem.css">
 </head>
 <body>
 

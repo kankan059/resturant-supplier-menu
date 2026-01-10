@@ -15,6 +15,7 @@ $supplierName = $_SESSION['name'];
 <html>
 <head>
     <title>Supplier Dashboard</title>
+    <link rel="stylesheet" href="/assests/cs/Sdashboard.css">
 </head>
 <body>
 

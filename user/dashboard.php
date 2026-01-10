@@ -15,8 +15,10 @@ $userName = $_SESSION['name'];
 <html>
 <head>
     <title>User Dashboard</title>
+    <link rel="stylesheet" href="/assests/cs/udash.css">
 </head>
 <body>
+   
 
 <h2>User Dashboard</h2>
 

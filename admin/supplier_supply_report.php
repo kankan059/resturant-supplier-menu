@@ -23,6 +23,172 @@ if (isset($_GET['supplier_id']) && $_GET['supplier_id'] != "") {
     <title>Supplier Supply Report</title>
 </head>
 <body>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc, #eef2f7);
+    padding: 3rem 1rem;
+    color: #111827;
+}
+
+/* Page Title */
+h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+}
+
+/* Filter Form */
+form {
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    background: #ffffff;
+    padding: 1.5rem 1.8rem;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Label */
+label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+/* Select */
+select {
+    width: 100%;
+    margin-top: 0.6rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    font-size: 0.95rem;
+    color: #111827;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+select:focus {
+    background: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Button */
+button {
+    margin-top: 1.2rem;
+    padding: 0.75rem 1.6rem;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45);
+}
+
+/* Table */
+table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Head */
+th {
+    background: #f1f5f9;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1f2937;
+    padding: 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+/* Body */
+td {
+    padding: 0.85rem 0.9rem;
+    font-size: 0.95rem;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover */
+tr:hover td {
+    background: #f9fafb;
+}
+
+/* Empty */
+td[colspan] {
+    text-align: center;
+    color: #6b7280;
+    padding: 1.2rem;
+}
+
+/* Back link */
+a[href*="dashboard"] {
+    display: block;
+    max-width: 300px;
+    margin: 2.5rem auto 0;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+    transition: all 0.3s ease;
+}
+
+a[href*="dashboard"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.7rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+    </style>
 
 <h2>Supplier Supply Report</h2>
 

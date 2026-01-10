@@ -1,23 +1,4 @@
-<?php
-// admin/sales_report.php
-session_start();
-include "../config/db.php";
-
-// admin protection
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== "admin") {
-    header("Location: ../index.php");
-    exit;
-}
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sales & Stock Report</title>
-</head>
-<body>
-<style>
-    
+/* ===== Premium White Theme – Remove Item Page ===== */
 
 * {
     margin: 0;
@@ -33,27 +14,40 @@ body {
     color: #111827;
 }
 
-/* Page Title */
+/* Title */
 h2 {
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Message */
+p {
+    max-width: 900px;
+    margin: 0 auto 1.2rem;
+    padding: 0.9rem 1rem;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 0.95rem;
 }
 
 /* Table */
 table {
     width: 100%;
     max-width: 900px;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
     border-collapse: collapse;
     background: #ffffff;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Head */
+/* Table Head */
 th {
     background: #f1f5f9;
     font-size: 0.9rem;
@@ -64,7 +58,7 @@ th {
     text-align: left;
 }
 
-/* Body */
+/* Table Body */
 td {
     padding: 0.85rem 0.9rem;
     font-size: 0.95rem;
@@ -81,11 +75,37 @@ tr:hover td {
     background: #f9fafb;
 }
 
+/* Action link */
+td a {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #dc2626;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+td a:hover {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Empty row */
+td[colspan] {
+    text-align: center;
+    color: #6b7280;
+    padding: 1.2rem;
+}
+
 /* Back link */
 a[href*="dashboard"] {
     display: block;
     max-width: 260px;
-    margin: 2.5rem auto 0;
+    margin: 2rem auto 0;
     text-align: center;
     padding: 0.75rem;
     border-radius: 14px;
@@ -111,44 +131,4 @@ a[href*="dashboard"]:hover {
     th, td {
         padding: 0.7rem;
     }
-
-    h2 {
-        font-size: 1.8rem;
-    }
 }
-
-</style>
-
-<h2>Sales & Stock Report</h2>
-
-<table border="1" cellpadding="8">
-    <tr>
-        <th>Item Name</th>
-        <th>Total Quantity</th>
-        <th>Sold Quantity</th>
-        <th>Remaining Quantity</th>
-    </tr>
-
-<?php
-$result = mysqli_query($conn, "SELECT * FROM items");
-
-while ($row = mysqli_fetch_assoc($result)) {
-
-    $remaining = $row['total_quantity'] - $row['sold_quantity'];
-
-    echo "<tr>";
-    echo "<td>".$row['item_name']."</td>";
-    echo "<td>".$row['total_quantity']."</td>";
-    echo "<td>".$row['sold_quantity']."</td>";
-    echo "<td>".$remaining."</td>";
-    echo "</tr>";
-}
-?>
-</table>
-
-<br>
-
-<a href="dashboard.php">Back to Dashboard</a>
-
-</body>
-</html>

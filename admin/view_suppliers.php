@@ -39,6 +39,7 @@ if (isset($_GET['view'])) {
 <html>
 <head>
     <title>View Suppliers</title>
+    <link rel="stylesheet" href="/assests/cs/viewSupllier.css">
 </head>
 <body>
 

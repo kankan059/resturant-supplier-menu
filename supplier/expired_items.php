@@ -31,9 +31,10 @@ if (isset($_GET['remove'])) {
 <html>
 <head>
     <title>Expired Supplied Items</title>
+    <link rel="stylesheet" href="/assests/cs/expired.css">
 </head>
 <body>
-
+  
 <h2>Expired Supplied Items</h2>
 
 <?php if ($message != ""): ?>

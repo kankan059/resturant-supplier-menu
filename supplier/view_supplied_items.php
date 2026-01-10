@@ -14,6 +14,7 @@ $supplier_id = $_SESSION['id'];
 <html>
 <head>
     <title>My Supplied Items</title>
+    <link rel="stylesheet" href="/assests/cs/viewSuplly.css">
 </head>
 <body>
 

@@ -66,41 +66,44 @@ if (isset($_POST['login'])) {
     }
 }
 ?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Login</title>
+
+    <!-- CSS FILE LINK -->
+    <link rel="stylesheet" href="assests/cs/auth.css">
 </head>
 <body>
 
-<h2>Login</h2>
+    <h2>Login</h2>
 
-<form method="POST">
+    <form method="POST">
 
-    <label>Email</label><br>
-    <input type="email" name="email" required><br><br>
+        <label>Email</label>
+        <input type="email" name="email" required>
 
-    <label>Password</label><br>
-    <input type="password" name="password" required><br><br>
+        <label>Password</label>
+        <input type="password" name="password" required>
 
-    <label>Login As</label><br>
-    <select name="role" required>
-        <option value="admin">Admin</option>
-        <option value="supplier">Supplier</option>
-        <option value="user">User</option>
-    </select><br><br>
+        <label>Login As</label>
+        <select name="role" required>
+            <option value="admin">Admin</option>
+            <option value="supplier">Supplier</option>
+            <option value="user">User</option>
+        </select>
 
-    <button type="submit" name="login">Login</button>
+        <button type="submit" name="login">Login</button>
 
-</form>
+    </form>
 
-<p><?php echo $message; ?></p>
+    <p><?php echo $message; ?></p>
 
-<p>
-    New user?
-    <a href="auth/signup.php">Signup here</a>
-</p>
+    <p>
+        New user?
+        <a href="auth/signup.php">Create account</a>
+    </p>
 
 </body>
 </html>

@@ -15,6 +15,7 @@ $adminName = $_SESSION['name'];
 <html>
 <head>
     <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/assests/cs/admind.css">
 </head>
 <body>
 
